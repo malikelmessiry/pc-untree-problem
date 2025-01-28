@@ -5,7 +5,7 @@ class Node:
         self.value = value
         self.left = left
         self.right = right
-        
+
 
 def convert(tree):
     # Your solution here!
