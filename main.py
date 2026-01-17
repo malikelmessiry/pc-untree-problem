@@ -8,9 +8,22 @@ class Node:
 
 
 def convert(tree):
-    # Your solution here!
-    pass
+    result = {}
 
+    def dfs(node):
+        if node is None:
+            return
+
+        left_val = node.left.value if node.left else None
+        right_val = node.right.value if node.right else None
+
+        result[node.value] = (left_val, right_val)
+
+        dfs(node.left)
+        dfs(node.right)
+
+    dfs(tree)
+    return result
 
 r"""
        d
